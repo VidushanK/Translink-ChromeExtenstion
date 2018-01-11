@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Translink Bus Locator</title>
@@ -6,6 +6,9 @@
   </head>
   <body>
     <h1>Hello World!</h1>
-    <button id="checkPage">Check this page now!</button>
+    <form class="pure-form">
+    <input id="busID" type="text" placeholder="Enter Name" onChange="inputChange(event)" onkeypress="inputChange(event)" />
+    <button type="submit"><i class="fa fa-chevron-circle-right"></i></button>
+  </form>
   </body>
 </html>

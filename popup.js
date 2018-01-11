@@ -12,6 +12,11 @@ function inputChange(e) {
       },
     })
       .then(res => res.json())
-      .then(res => console.log(res));
+      .then(res => {
+        const busTime = res[0].Schedules
+        let times = busTime.map( bus => {
+          console.log(bus.ExpectedLeaveTime)
+        })
+      });
   }
 }

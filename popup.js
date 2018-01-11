@@ -15,8 +15,9 @@ function inputChange(e) {
       .then(res => {
         const busTime = res[0].Schedules
         let times = busTime.map( bus => {
-          console.log(bus.ExpectedLeaveTime)
-        })
+          return (`<li> ${bus.ExpectedLeaveTime} </li>`)
+        }).join(' ')
+        document.getElementById('busTimes').innerHTML = times
       });
   }
 }

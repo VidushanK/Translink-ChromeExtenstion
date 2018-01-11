@@ -4,7 +4,7 @@ function inputChange(e) {
     const busID = document.getElementById("busID").value;
     console.log(busID);
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = `http://api.translink.ca/RTTIAPI/V1/stops/55612?apikey=GMPEN4nbnZxrUBYQYkVh`;
+    const url = `http://api.translink.ca/RTTIAPI/V1/stops/${busID}?apikey=GMPEN4nbnZxrUBYQYkVh`;
     fetch(proxyurl + url)
       .then(response => response.text())
       .then(contents => console.log(contents))
